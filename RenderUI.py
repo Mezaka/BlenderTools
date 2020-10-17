@@ -5,6 +5,7 @@ import os
 pixelsPerUnit = 424.0
 selectChildren = True
 autoSaveRender = True
+cameraName = "Camera"
 
 objectName = bpy.context.selected_objects[0].name
 
@@ -71,7 +72,7 @@ bpy.context.scene.render.resolution_x = sizeX*pixelsPerUnit
 bpy.context.scene.render.resolution_y = sizeY*pixelsPerUnit
 
 #Set Camera Scale
-cam = bpy.data.cameras["Camera.001"]
+cam = bpy.data.cameras[cameraName]
 cam.ortho_scale = max(sizeX,sizeY)
 
 #set Camera Position
